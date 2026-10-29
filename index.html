@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elvesy</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    min-height: 100vh;
+    font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: radial-gradient(circle at 20% 0%, #1b2a4a 0%, #0b0f1a 55%, #06080d 100%);
+    color: #e6eaf2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+  }
+  main { width: 100%; max-width: 720px; }
+  .card {
+    border: 1px solid rgba(255,255,255,.10);
+    background: rgba(255,255,255,.045);
+    border-radius: 18px;
+    padding: 40px 36px;
+    backdrop-filter: blur(8px);
+  }
+  .avatar {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: linear-gradient(135deg, #4f8cff, #9b6bff);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 22px; letter-spacing: .5px;
+    margin-bottom: 22px;
+  }
+  h1 { font-size: 30px; letter-spacing: .5px; }
+  .tagline { margin-top: 8px; color: #93a1bb; font-size: 15px; }
+  .divider { height: 1px; background: rgba(255,255,255,.09); margin: 26px 0; }
+  h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 1.4px; color: #7f8da8; margin-bottom: 12px; }
+  p.body { color: #c2cbdd; line-height: 1.75; font-size: 15px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .links a {
+    text-decoration: none; color: #cfd8ea; font-size: 14px;
+    border: 1px solid rgba(255,255,255,.14);
+    padding: 9px 16px; border-radius: 999px; transition: .18s;
+  }
+  .links a:hover { background: rgba(79,140,255,.16); border-color: rgba(79,140,255,.55); color: #fff; }
+  footer { margin-top: 26px; color: #5f6b83; font-size: 12.5px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <div class="avatar">EL</div>
+    <h1>Elvesy</h1>
+    <p class="tagline">Developer · 个人项目与技术笔记</p>
+    <div class="divider"></div>
+    <h2>About</h2>
+    <p class="body">这里记录我的个人项目、实验代码与学习笔记，主要涉及科学计算与工程工具的开发。站点内容持续更新中。</p>
+    <div class="divider"></div>
+    <h2>Links</h2>
+    <div class="links">
+      <a href="https://github.com/E-l-ve-s-y" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/E-l-ve-s-y?tab=repositories" target="_blank" rel="noopener">Projects</a>
+    </div>
+    <footer>© 2026 Elvesy · Powered by GitHub Pages</footer>
+  </div>
+</main>
+</body>
+</html>
