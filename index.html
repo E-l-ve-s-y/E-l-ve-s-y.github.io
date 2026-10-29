@@ -3,67 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Elvesy</title>
+<title>Elvesy · Developer</title>
+<meta name="description" content="Elvesy 的个人开发者主页：科学计算、GPU 加速与工程工具开发。">
 <style>
-  :root { color-scheme: dark; }
+  :root {
+    color-scheme: dark;
+    --bg: #070b14;
+    --card: rgba(255,255,255,.045);
+    --line: rgba(255,255,255,.10);
+    --text: #e6eaf2;
+    --muted: #93a1bb;
+    --accent: #5b8cff;
+  }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    min-height: 100vh;
     font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-    background: radial-gradient(circle at 20% 0%, #1b2a4a 0%, #0b0f1a 55%, #06080d 100%);
-    color: #e6eaf2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 32px 20px;
+    background:
+      radial-gradient(900px 500px at 15% -10%, #1b2a4a 0%, transparent 60%),
+      radial-gradient(700px 400px at 90% 0%, #2a1b4a 0%, transparent 55%),
+      var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 0 20px 64px;
   }
-  main { width: 100%; max-width: 720px; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  header { padding: 72px 0 40px; }
+  .badge {
+    display: inline-block; font-size: 12.5px; letter-spacing: .8px;
+    color: #9fb4ff; border: 1px solid rgba(91,140,255,.4);
+    background: rgba(91,140,255,.10); padding: 5px 12px; border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  h1 { font-size: 42px; letter-spacing: -.5px; line-height: 1.15; }
+  .lead { margin-top: 14px; color: var(--muted); font-size: 16.5px; max-width: 640px; }
+  .meta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .meta a {
+    color: #cfd8ea; text-decoration: none; font-size: 14px;
+    border: 1px solid var(--line); padding: 8px 16px; border-radius: 999px;
+    transition: .18s;
+  }
+  .meta a:hover { border-color: rgba(91,140,255,.6); background: rgba(91,140,255,.14); color: #fff; }
+  section { margin-top: 44px; }
+  h2 {
+    font-size: 13px; text-transform: uppercase; letter-spacing: 1.6px;
+    color: #7f8da8; margin-bottom: 16px;
+  }
   .card {
-    border: 1px solid rgba(255,255,255,.10);
-    background: rgba(255,255,255,.045);
-    border-radius: 18px;
-    padding: 40px 36px;
-    backdrop-filter: blur(8px);
+    border: 1px solid var(--line); background: var(--card);
+    border-radius: 16px; padding: 26px 26px;
   }
-  .avatar {
-    width: 64px; height: 64px; border-radius: 50%;
-    background: linear-gradient(135deg, #4f8cff, #9b6bff);
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 22px; letter-spacing: .5px;
-    margin-bottom: 22px;
+  .card p + p { margin-top: 12px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .project { border: 1px solid var(--line); background: var(--card); border-radius: 14px; padding: 20px; transition: .18s; }
+  .project:hover { border-color: rgba(91,140,255,.45); transform: translateY(-2px); }
+  .project h3 { font-size: 16px; margin-bottom: 8px; }
+  .project p { color: var(--muted); font-size: 14px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    font-size: 12.5px; color: #b9c6e0; border: 1px solid var(--line);
+    padding: 5px 11px; border-radius: 8px; background: rgba(255,255,255,.03);
   }
-  h1 { font-size: 30px; letter-spacing: .5px; }
-  .tagline { margin-top: 8px; color: #93a1bb; font-size: 15px; }
-  .divider { height: 1px; background: rgba(255,255,255,.09); margin: 26px 0; }
-  h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 1.4px; color: #7f8da8; margin-bottom: 12px; }
-  p.body { color: #c2cbdd; line-height: 1.75; font-size: 15px; }
-  .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
-  .links a {
-    text-decoration: none; color: #cfd8ea; font-size: 14px;
-    border: 1px solid rgba(255,255,255,.14);
-    padding: 9px 16px; border-radius: 999px; transition: .18s;
-  }
-  .links a:hover { background: rgba(79,140,255,.16); border-color: rgba(79,140,255,.55); color: #fff; }
-  footer { margin-top: 26px; color: #5f6b83; font-size: 12.5px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); color: #5f6b83; font-size: 13px; }
 </style>
 </head>
 <body>
-<main>
-  <div class="card">
-    <div class="avatar">EL</div>
+<div class="wrap">
+  <header>
+    <span class="badge">OPEN SOURCE · PERSONAL SITE</span>
     <h1>Elvesy</h1>
-    <p class="tagline">Developer · 个人项目与技术笔记</p>
-    <div class="divider"></div>
-    <h2>About</h2>
-    <p class="body">这里记录我的个人项目、实验代码与学习笔记，主要涉及科学计算与工程工具的开发。站点内容持续更新中。</p>
-    <div class="divider"></div>
-    <h2>Links</h2>
-    <div class="links">
+    <p class="lead">开发者，关注科学计算、GPU 加速与工程工具链。习惯用 C++ 和 CUDA 把计算密集的任务变快，也写 Python 做验证与数据分析。</p>
+    <div class="meta">
       <a href="https://github.com/E-l-ve-s-y" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://github.com/E-l-ve-s-y?tab=repositories" target="_blank" rel="noopener">Projects</a>
+      <a href="https://github.com/E-l-ve-s-y?tab=repositories" target="_blank" rel="noopener">全部仓库</a>
     </div>
-    <footer>© 2026 Elvesy · Powered by GitHub Pages</footer>
-  </div>
-</main>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <div class="card">
+      <p>我的主要工作方向是计算物理与数值模拟：把物理模型拆成可并行执行的计算核，再针对硬件特性做优化。日常会处理核素数据、截面数据库和瞬态求解这类问题。</p>
+      <p>这个站点用于整理项目说明、实验结果和技术笔记，所有内容均为个人学习与非商业性质。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="project">
+        <h3>GPU 加速计算实验</h3>
+        <p>面向 NVIDIA 架构的计算核优化实践，覆盖内存布局、访存合并与占用率调优。</p>
+      </div>
+      <div class="project">
+        <h3>科学计算工具链</h3>
+        <p>用于数据准备、结果校验与批量实验的脚本和小工具，目标是减少重复的手工流程。</p>
+      </div>
+      <div class="project">
+        <h3>技术笔记</h3>
+        <p>记录构建环境、调试过程和性能分析的实践结论，方便回溯与复现。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Stack</h2>
+    <div class="tags">
+      <span class="tag">C++</span>
+      <span class="tag">CUDA</span>
+      <span class="tag">Python</span>
+      <span class="tag">Linux</span>
+      <span class="tag">Git</span>
+      <span class="tag">Numerical Simulation</span>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Elvesy · 个人开发者站点 · Powered by GitHub Pages
+  </footer>
+</div>
 </body>
 </html>
